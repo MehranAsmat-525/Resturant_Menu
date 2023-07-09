@@ -1,0 +1,98 @@
+body {
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+.card_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 22px;
+    text-align: center;
+    /* margin-top: 122px; */
+}
+.card_container1 {
+    padding: 12px 3px;
+    box-shadow: 0.1px 0.1px 7px 0.2px wheat;
+    border-radius: 15px;
+}
+img {
+    /* max-width: 70%;
+    height: auto;
+    margin: 6px 2px; */
+    height: 220px;
+}
+.btn {
+    padding: 6px 12px;
+    border: 1px solid wheat;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 22px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    /* margin-top: 22px; */
+    margin: 33px 0;
+}
+.navbar /* Style the button with a gradient background */
+button {
+    background: linear-gradient(to bottom, #4caf50, #2e8b57);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Add hover effect */
+button:hover {
+    background: linear-gradient(to bottom, #2e8b57, #4caf50);
+}
+
+/* Add active effect */
+button:active {
+    background: #2e8b57;
+}
+
+.two .price {
+    margin-left: 22px;
+    /* text-decoration: underline; */
+}
+.two .price::after {
+    content: "$";
+    margin-left: 2px;
+}
+@media (max-width: 768px) {
+    .card_container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 12px;
+        margin-top: 64px;
+    }
+
+    img {
+        margin: 4px;
+    }
+}
+@media (max-width: 480px) {
+    .card_container {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-gap: 8px;
+        margin-top: 32px;
+        /* border: 2px solid red; */
+    }
+    .card_container1 {
+        margin: 12px 3px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .navbar{
+        gap: 6px;
+    }
+    .navbar button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}
